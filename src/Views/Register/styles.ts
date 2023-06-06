@@ -34,3 +34,28 @@ export const StyledRegisterWrapper = styled.div`
   flex-direction: column;
   padding: 5vh 50px 20px 50px;
 `;
+
+export const StyledButtonWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+`;
+
+export const StyledLink = styled.span`
+  color: white;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+
+  a {
+    margin-top: 2px;
+    text-decoration: none;
+    color: #7c3aed;
+    transition: all 300ms ease-in-out 0s;
+
+    &:hover {
+      color: #a579f1;
+    }
+  }
+`;

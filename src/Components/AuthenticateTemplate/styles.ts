@@ -6,16 +6,17 @@ const media768 = "@media screen and (max-width: 767px)";
 export const StyledRegisterWrapper = styled.section`
   display: flex;
   min-height: 100vh;
+  align-items: center;
   background: rgb(24, 24, 27);
 `;
 
 export const StyledRegisterRightItem = styled.div`
   width: 50%;
-  min-height: 100vh;
+  min-height: calc(100vh - 20px);
+  height: calc(100% - 20px);
   background: #7c3aed;
   box-sizing: border-box;
   border-radius: 50px 0 0 50px;
-
   display: flex;
   justify-content: center;
   align-items: center;
@@ -31,7 +32,6 @@ export const StyledRegisterContent = styled.div`
   width: 50%;
   height: 100%;
   padding: 32px;
-
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -47,10 +47,8 @@ export const StyledLogoImg = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-
   background-image: url(${BigLogo});
   background-repeat: no-repeat;
-
   background-size: contain;
   background-position: center;
   width: 100%;

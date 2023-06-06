@@ -7,6 +7,7 @@ import {
 } from "../../Components";
 
 import * as S from "./styles";
+import { Link } from "react-router-dom";
 
 const Login = () => {
   return (
@@ -38,7 +39,12 @@ const Login = () => {
               throw new Error("Function not implemented.");
             }}
           />
-          <AuthenticateButton text="Login" />
+          <S.StyledButtonWrapper>
+            <AuthenticateButton text="Login" />
+            <S.StyledLink>
+              Caso não possua uma conta <Link to="/register">Clique Aqui</Link>
+            </S.StyledLink>
+          </S.StyledButtonWrapper>
         </S.StyledFormWrapper>
       </S.StyledRegisterWrapper>
     </AuthenticateTemplate>

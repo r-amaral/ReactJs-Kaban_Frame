@@ -7,6 +7,7 @@ import {
 } from "../../Components";
 
 import * as S from "./styles";
+import { Link } from "react-router-dom";
 
 const Register = () => {
   return (
@@ -58,7 +59,12 @@ const Register = () => {
               throw new Error("Function not implemented.");
             }}
           />
-          <AuthenticateButton text="Cadastrar" />
+          <S.StyledButtonWrapper>
+            <AuthenticateButton text="Cadastrar" />
+            <S.StyledLink>
+              Caso já possua uma conta <Link to="/">Clique Aqui</Link>
+            </S.StyledLink>
+          </S.StyledButtonWrapper>
         </S.StyledFormWrapper>
       </S.StyledRegisterWrapper>
     </AuthenticateTemplate>
