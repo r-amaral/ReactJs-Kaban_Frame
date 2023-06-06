@@ -20,7 +20,7 @@ export const StyledInputLabel = styled.label<{ value?: string | number }>`
 `;
 
 export const InputWrapper = styled.div`
-  height: 30px;
+  height: 40px;
   position: relative;
   padding: 2.5px 9px;
   box-shadow: 0 0 0 1px white;
