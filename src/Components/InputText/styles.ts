@@ -49,7 +49,7 @@ export const StyledInput = styled.input`
   transition: all 300ms ease-in-out 0s;
 
   &:hover,
-  &:has(input:focus) {
+  &:focus {
     opacity: 1;
   }
 `;
