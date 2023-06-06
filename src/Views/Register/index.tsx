@@ -21,6 +21,7 @@ const Register = () => {
           <InputText
             type="text"
             label="Nome"
+            placeholder="Digite seu nome"
             onChange={function (
               event: React.ChangeEvent<HTMLInputElement>
             ): void {
@@ -30,6 +31,7 @@ const Register = () => {
           <InputText
             type="text"
             label="Email"
+            placeholder="Digite seu email"
             onChange={function (
               event: React.ChangeEvent<HTMLInputElement>
             ): void {
@@ -37,8 +39,9 @@ const Register = () => {
             }}
           />
           <InputText
-            type="text"
+            type="password"
             label="Senha"
+            placeholder="Digite sua senha"
             onChange={function (
               event: React.ChangeEvent<HTMLInputElement>
             ): void {
@@ -46,8 +49,9 @@ const Register = () => {
             }}
           />
           <InputText
-            type="text"
+            type="password"
             label="Confirmar senha"
+            placeholder="Confirme sua senha"
             onChange={function (
               event: React.ChangeEvent<HTMLInputElement>
             ): void {

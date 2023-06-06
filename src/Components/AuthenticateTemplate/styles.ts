@@ -1,6 +1,8 @@
 import styled from "styled-components";
 import BigLogo from "../../assets/BigLogo.png";
 
+const media768 = "@media screen and (max-width: 767px)";
+
 export const StyledRegisterWrapper = styled.section`
   display: flex;
   min-height: 100vh;
@@ -18,6 +20,10 @@ export const StyledRegisterRightItem = styled.div`
   justify-content: center;
   align-items: center;
   padding: 32px;
+
+  ${media768} {
+    display: none;
+  }
 `;
 
 export const StyledRegisterContent = styled.div`
@@ -31,6 +37,10 @@ export const StyledRegisterContent = styled.div`
   align-items: center;
   min-height: 100vh;
   box-sizing: border-box;
+
+  ${media768} {
+    width: 100%;
+  }
 `;
 
 export const StyledLogoImg = styled.div`

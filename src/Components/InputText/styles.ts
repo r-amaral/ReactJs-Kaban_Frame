@@ -6,7 +6,7 @@ export const StyledInputLabel = styled.label<{ value?: string | number }>`
   left: 8px;
   top: 50%;
   transform: translateY(-50%);
-  transition: 300ms;
+  transition: all 300ms ease-in-out 0s;
   font-size: 13px;
   padding: 0 4px;
   background: rgb(24, 24, 27);
@@ -24,7 +24,7 @@ export const InputWrapper = styled.div`
   position: relative;
   padding: 2.5px 9px;
   box-shadow: 0 0 0 1px white;
-  transition: 300ms;
+  transition: all 300ms ease-in-out 0s;
   border-radius: 5px;
 
   &:hover,
@@ -45,4 +45,11 @@ export const StyledInput = styled.input`
   height: 100%;
   width: 100%;
   color: white;
+  opacity: 0;
+  transition: all 300ms ease-in-out 0s;
+
+  &:hover,
+  &:has(input:focus) {
+    opacity: 1;
+  }
 `;
