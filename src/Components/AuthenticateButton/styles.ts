@@ -10,6 +10,7 @@ export const StyledButton = styled.button`
   color: white;
   transition: all 300ms ease-in-out 0s;
   border-radius: 4px;
+  height: 45px;
 
   &:hover {
     background: #4b238f;
