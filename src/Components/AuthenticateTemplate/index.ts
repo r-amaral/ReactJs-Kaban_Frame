@@ -1,0 +1,1 @@
+export { AuthenticateTemplate } from "./AuthenticateTemplate";
