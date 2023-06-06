@@ -3,13 +3,12 @@ import styled, { css } from "styled-components";
 export const StyledInputLabel = styled.label<{ value?: string | number }>`
   color: white;
   position: absolute;
-  left: 10px;
+  left: 8px;
   top: 50%;
-
   transform: translateY(-50%);
   transition: 300ms;
-
-  padding: 0 8px;
+  font-size: 13px;
+  padding: 0 4px;
   background: rgb(24, 24, 27);
 
   ${({ value }) =>
@@ -23,7 +22,7 @@ export const StyledInputLabel = styled.label<{ value?: string | number }>`
 export const InputWrapper = styled.div`
   height: 30px;
   position: relative;
-  padding: 2.5px 13px;
+  padding: 2.5px 9px;
   box-shadow: 0 0 0 1px white;
   transition: 300ms;
   border-radius: 5px;

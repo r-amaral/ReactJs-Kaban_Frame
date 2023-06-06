@@ -9,7 +9,6 @@ export const StyledRegisterWrapper = styled.section`
 
 export const StyledRegisterRightItem = styled.div`
   width: 50%;
-  height: 100%;
   min-height: 100vh;
   background: #7c3aed;
   box-sizing: border-box;
@@ -26,6 +25,12 @@ export const StyledRegisterContent = styled.div`
   width: 50%;
   height: 100%;
   padding: 32px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  box-sizing: border-box;
 `;
 
 export const StyledLogoImg = styled.div`
