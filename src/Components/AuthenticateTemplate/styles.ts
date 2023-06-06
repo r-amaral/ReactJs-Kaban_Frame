@@ -25,6 +25,7 @@ export const StyledRegisterContent = styled.div`
   background: rgb(24, 24, 27);
   width: 50%;
   height: 100%;
+  padding: 32px;
 `;
 
 export const StyledLogoImg = styled.div`
