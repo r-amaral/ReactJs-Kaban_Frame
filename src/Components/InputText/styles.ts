@@ -1,5 +1,17 @@
 import styled, { css } from "styled-components";
 
+interface StyleProps {
+  value?: string | number;
+  error?: boolean;
+}
+
+const getColor = (props: StyleProps) => {
+  if (props.error) return 'box-shadow: 0 0 0 2px red'
+  if (props.value) return 'box-shadow: 0 0 0 2px #7c3aed'
+
+  return 'box-shadow: 0 0 0 1px white'
+}
+
 export const StyledInputLabel = styled.label<{ value?: string | number }>`
   color: white;
   position: absolute;
@@ -14,7 +26,7 @@ export const StyledInputLabel = styled.label<{ value?: string | number }>`
   ${({ value }) =>
     value &&
     css`
-      top: -11px;
+      top: -2px;
       left: 5px;
     `}
 `;
@@ -23,7 +35,9 @@ export const InputWrapper = styled.div`
   height: 40px;
   position: relative;
   padding: 2.5px 9px;
-  box-shadow: 0 0 0 1px white;
+
+${(props: StyleProps) => getColor(props)};
+   
   transition: all 300ms ease-in-out 0s;
   border-radius: 5px;
 
@@ -38,14 +52,14 @@ export const InputWrapper = styled.div`
   }
 `;
 
-export const StyledInput = styled.input`
+export const StyledInput = styled.input<{ value?: string | number }>`
   outline: none;
   border: none;
   background: transparent;
   height: 100%;
   width: 100%;
   color: white;
-  opacity: 0;
+  opacity: ${({ value }) => value ? 1 : 0};
   transition: all 300ms ease-in-out 0s;
 
   &:hover,
