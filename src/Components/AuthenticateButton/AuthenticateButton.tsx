@@ -2,12 +2,18 @@ import React from "react";
 import * as S from "./styles";
 
 interface AuthenticateButtonProps {
-  text: string;
+    text: string;
+    onClick: React.MouseEventHandler<HTMLButtonElement>;
 }
 
 export const AuthenticateButton: React.FC<AuthenticateButtonProps> = ({
-  text,
-  ...rest
+    text,
+    onClick,
+    ...rest
 }) => {
-  return <S.StyledButton {...rest}>{text}</S.StyledButton>;
+    return (
+        <S.StyledButton onClick={onClick} {...rest}>
+            {text}
+        </S.StyledButton>
+    );
 };
