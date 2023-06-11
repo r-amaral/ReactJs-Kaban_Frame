@@ -130,7 +130,9 @@ const Register = () => {
                         }
                     />
                     <S.StyledButtonWrapper>
-                        {!!error && <span>{error}</span>}
+                        {!!error && (
+                            <S.StyledMessageError>{error}</S.StyledMessageError>
+                        )}
                         <AuthenticateButton
                             text="Cadastrar"
                             onClick={validate}

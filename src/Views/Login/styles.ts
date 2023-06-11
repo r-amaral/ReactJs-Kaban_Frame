@@ -62,3 +62,8 @@ export const StyledLink = styled.span`
     }
   }
 `;
+
+export const StyledMessageError = styled.span`
+color: white;
+margin-bottom:10px;
+`

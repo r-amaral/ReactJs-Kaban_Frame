@@ -51,12 +51,12 @@ const Login = () => {
                         placeholder="Digite sua senha"
                         onChange={({ target }) => setPassword(target.value)}
                     />
-                    {!!loggedError && (
-                        <span>
-                            Ops, email ou senha inválidos. Tente novamente!
-                        </span>
-                    )}
                     <S.StyledButtonWrapper>
+                        {!!loggedError && (
+                            <S.StyledMessageError>
+                                Ops, email ou senha inválidos. Tente novamente!
+                            </S.StyledMessageError>
+                        )}
                         <AuthenticateButton text="Login" onClick={loginUser} />
                         <S.StyledLink>
                             Caso não possua uma conta{" "}
