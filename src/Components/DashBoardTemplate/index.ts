@@ -1,0 +1,1 @@
+export { DashBoardTemplate } from './DashBoardTemplate'
