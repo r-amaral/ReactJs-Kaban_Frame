@@ -1,5 +1,11 @@
 import React from "react";
+import * as S from "./styles";
+import { BoardHeader } from "./BoardHeader";
 
 export const Boards: React.FC = () => {
-    return <div>Boards</div>;
+    return (
+        <S.BoardWrapper>
+            <BoardHeader />
+        </S.BoardWrapper>
+    );
 };

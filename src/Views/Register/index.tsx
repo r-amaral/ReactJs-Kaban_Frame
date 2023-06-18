@@ -10,9 +10,10 @@ import {
 import * as S from "./styles";
 import { Link } from "react-router-dom";
 import { createUserWithEmailAndPassword } from "firebase/auth";
-import { auth } from "../../Firebase/firebaseConfig";
+import { auth, useCollectionRef } from "../../Firebase/firebaseConfig";
 import { emailAlreadyInUse, errorType, initialStates } from "./constants";
 import { SucessfulRegistration } from "./SuccessfulRegistration";
+import { addDoc } from "firebase/firestore";
 
 const Register = () => {
     const [error, setError] = React.useState<string>("");
@@ -58,7 +59,14 @@ const Register = () => {
     const createUser = async () => {
         setLoading(true);
         createUserWithEmailAndPassword(auth, email, password)
-            .then(() => setSuccessfulRegistration(true))
+            .then(() => {
+                addDoc(useCollectionRef, {
+                    fullName,
+                    email,
+                    password,
+                });
+                setSuccessfulRegistration(true);
+            })
             .catch((error) =>
                 error.code === emailAlreadyInUse
                     ? setError(errorType.existingEmail)

@@ -13,7 +13,6 @@ import { signInWithEmailAndPassword } from "firebase/auth";
 
 const Login = () => {
     const navigate = useNavigate();
-    auth.signOut();
 
     const [email, setEmail] = React.useState<string>("");
     const [password, setPassword] = React.useState<string>("");
@@ -24,7 +23,9 @@ const Login = () => {
         setLoading(true);
 
         signInWithEmailAndPassword(auth, email, password)
-            .then(() => navigate("/dashboard"))
+            .then(() => {
+                navigate("/dashboard/boards");
+            })
             .catch(() => setErrorLogged(true))
             .finally(() => setLoading(false));
     };
@@ -42,12 +43,14 @@ const Login = () => {
                     <InputText
                         type="text"
                         label="Email"
+                        value={email}
                         placeholder="Digite seu email"
                         onChange={({ target }) => setEmail(target.value)}
                     />
                     <InputText
                         type="password"
                         label="Senha"
+                        value={password}
                         placeholder="Digite sua senha"
                         onChange={({ target }) => setPassword(target.value)}
                     />
