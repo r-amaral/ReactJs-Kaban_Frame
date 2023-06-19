@@ -5,5 +5,5 @@ display: grid;
 grid-template-columns: 1fr 1fr 1fr 1fr;
 min-width: 100%;
 gap: 20px;
-max-height: calc(100vh - 315px);
+max-height: calc(100vh - 345px);
 `

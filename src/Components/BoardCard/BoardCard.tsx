@@ -1,3 +1,4 @@
+import React from "react";
 import { DeleteIcon } from "@chakra-ui/icons";
 import { Box, IconButton, ScaleFade } from "@chakra-ui/react";
 import _ from "lodash";
@@ -41,7 +42,7 @@ export const BoardCard: React.FC<TaskProps> = ({
                 ref={ref}
                 as="div"
                 role="group"
-                h={150}
+                minH={150}
                 position="relative"
                 rounded="lg"
                 maxW={299}
@@ -53,7 +54,7 @@ export const BoardCard: React.FC<TaskProps> = ({
                 cursor={isDragging ? "grabbing" : "grab"}
                 fontWeight="bold"
                 userSelect="none"
-                bgColor={"#eeeeee"}
+                bgColor={"#7c3aed"}
                 opacity={isDragging ? 0.5 : 1}
             >
                 <IconButton
@@ -64,7 +65,7 @@ export const BoardCard: React.FC<TaskProps> = ({
                     aria-label="delete-task"
                     size="md"
                     colorScheme="solid"
-                    color={"gray.700"}
+                    color={"#ffffff"}
                     icon={<DeleteIcon />}
                     opacity={0}
                     _groupHover={{
@@ -82,7 +83,7 @@ export const BoardCard: React.FC<TaskProps> = ({
                     minH={70}
                     maxH={200}
                     focusBorderColor="none"
-                    color="gray.700"
+                    color="#FFFFFF"
                     onChange={handleTitleChange}
                 />
             </Box>
