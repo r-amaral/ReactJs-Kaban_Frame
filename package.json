@@ -11,15 +11,25 @@
   },
   "dependencies": {
     "@types/styled-components": "^5.1.26",
+    "firebase": "^9.11.0",
     "react": "^18.2.0",
+    "react-dnd": "^16.0.1",
+    "react-dnd-html5-backend": "^16.0.1",
+    "react-textarea-autosize": "^8.3.4",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.12.0",
     "styled-components": "^5.3.10",
-    "firebase": "^9.11.0"
+    "usehooks-ts": "^2.6.0",
+    "uuid": "^8.3.2",
+    "@chakra-ui/icons": "^2.0.8",
+    "@chakra-ui/react": "^2.2.6",
+    "@emotion/react": "^11.10.0",
+    "@emotion/styled": "^11.10.0"
   },
   "devDependencies": {
     "@types/react": "^18.0.37",
     "@types/react-dom": "^18.0.11",
+    "@types/uuid": "^9.0.2",
     "@typescript-eslint/eslint-plugin": "^5.59.0",
     "@typescript-eslint/parser": "^5.59.0",
     "@vitejs/plugin-react": "^4.0.0",
